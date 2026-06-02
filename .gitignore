@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor / IDE
+.cursor/
+.vscode/
+.idea/
+
+# Source PDFs (kept local only — not deployed)
+*.pdf
+
+# Logs / temp
+*.log
+node_modules/

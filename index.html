@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vedant Parnaik — Robotics AI Engineer</title>
+  <meta name="description" content="Vedant Parnaik — Robotics AI Engineer specializing in autonomous driving, multi-modal perception, sensor fusion, SLAM, and edge AI deployment. Founding AI Engineer at IDrive Inc." />
+  <meta name="author" content="Vedant Parnaik" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vedant Parnaik — Robotics AI Engineer" />
+  <meta property="og:description" content="Building real-time perception pipelines for autonomous vehicles and robotics systems." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='monospace'%3E%E2%97%86%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <!-- Animated grid background -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="logo">
+        <span class="logo-mark">◆</span>
+        <span class="logo-text">vedant<span class="accent">.</span>parnaik</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="nav-cta">Get in touch</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <h1 class="hero-title fade-in">
+              <span class="line">Developing</span>
+              <span class="line"><span class="gradient-text">end-to-end</span></span>
+              <span class="line">hardware-software</span>
+              <span class="line"><span class="gradient-text">robotics and autonomy</span></span>
+              <span class="line">platforms.</span>
+            </h1>
+
+            <p class="hero-subtitle fade-in">
+              I'm <strong>Vedant Parnaik</strong> — a Robotics AI Engineer with 6+ years building
+              real-time perception, sensor fusion, and SLAM systems. Currently AI Engineer #3 on the
+              founding team at <a href="https://www.idrive.com/x/" target="_blank" rel="noreferrer" class="inline-link">IDrive Inc.</a>,
+              shipping end-to-end AI pipelines for Full Self-Driving and ADAS.
+            </p>
+
+            <div class="hero-cta fade-in">
+              <a href="#projects" class="btn btn-primary">
+                View projects
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-portrait fade-in">
+            <div class="portrait-frame">
+              <img src="images/mecropped.png" alt="Vedant Parnaik" loading="eager" />
+            </div>
+            <div class="portrait-bg" aria-hidden="true"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">01</span>
+          <h2 class="section-title">About</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I work at the intersection of <strong>deep learning</strong>, <strong>computer vision</strong>,
+              and <strong>real-time embedded systems</strong>. My focus is making robots perceive the world
+              robustly — fusing cameras, LiDAR, radar, IMU, and GNSS into reliable state estimates
+              that downstream planners and controllers can actually trust.
+            </p>
+            <p>
+              At <strong>IDrive Inc.</strong> I'm building the perception backbone for an FSD platform:
+              multi-modal sensor fusion, spatio-temporal motion prediction, and TensorRT-optimized
+              inference pipelines running on NVIDIA Jetson AGX and DGX Spark.
+            </p>
+            <p>
+              Outside of work I'm building <strong>NervLynx</strong> — a contract-first runtime framework
+              for reliable, observable robotics pipelines (currently under review at IEEE RA-L) — and
+              <strong>Handme Bot</strong>, a teleoperated mobile manipulator with a 5-finger bionic hand.
+            </p>
+            <p>
+              I hold an MS in Robotics from <strong>University at Buffalo, SUNY</strong>, where I led
+              stereo vision and visual odometry research on the KITTI dataset.
+            </p>
+          </div>
+
+          <aside class="about-card reveal">
+            <figure class="about-photo">
+              <img src="images/handme.jpg" alt="Handme Bot — teleoperated mobile manipulator built by Vedant Parnaik" loading="lazy" />
+              <figcaption>
+                <span class="about-photo-tag">Current build</span>
+                <h3>Handme Bot</h3>
+                <p>Teleoperated mobile manipulator running on the NervLynx robotics runtime.</p>
+              </figcaption>
+            </figure>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">02</span>
+          <h2 class="section-title">Experience</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <h3>Robotics AI Engineer <span class="role-tag">Founding Team · #3</span></h3>
+                <span class="company">IDrive Inc.</span>
+              </div>
+              <div class="exp-meta">
+                <span>Los Angeles, USA</span>
+                <span class="sep">·</span>
+                <span>Jan 2025 — Present</span>
+              </div>
+              <ul class="exp-points">
+                <li>Architecting end-to-end AI pipelines for Full Self-Driving (FSD) and ADAS — multi-modal perception, sensor fusion, and spatio-temporal motion prediction.</li>
+                <li>Designed perception systems integrating Camera, IMU, GNSS, LiDAR, Radar, and telemetry with SLAM and visual odometry for robust localization and object tracking.</li>
+                <li>Trained deep learning models (PyTorch / TensorFlow) for object detection, semantic segmentation, and motion prediction from multi-modal streams.</li>
+                <li>Processed <strong>6 TB</strong> of raw sensor data into ML-ready datasets; built large-scale preprocessing, telemetry ingestion, anomaly detection, and closed-loop validation pipelines.</li>
+                <li>Optimized real-time inference with CUDA, TensorRT, and ONNX on NVIDIA Jetson AGX and DGX Spark for embedded automotive platforms.</li>
+              </ul>
+              <div class="tags">
+                <span>PyTorch</span><span>TensorRT</span><span>CUDA</span><span>ROS2</span><span>SLAM</span><span>Sensor Fusion</span><span>Jetson</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <h3>Research Volunteer — Image Analysis</h3>
+                <span class="company">University at Buffalo, SUNY</span>
+              </div>
+              <div class="exp-meta">
+                <span>Buffalo, NY</span>
+                <span class="sep">·</span>
+                <span>Aug 2024 — Jan 2025</span>
+                <span class="sep">·</span>
+                <span>Advisor: Dr. Mingchen Gao</span>
+              </div>
+              <ul class="exp-points">
+                <li>ML research focused on data preprocessing, feature extraction, and augmentation pipelines in PyTorch.</li>
+              </ul>
+              <div class="tags"><span>PyTorch</span><span>Medical Imaging</span><span>Augmentation</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <h3>Graduate Student Researcher</h3>
+                <span class="company">University at Buffalo, SUNY</span>
+              </div>
+              <div class="exp-meta">
+                <span>Buffalo, NY</span>
+                <span class="sep">·</span>
+                <span>Feb 2023 — May 2024</span>
+              </div>
+              <ul class="exp-points">
+                <li>Led stereo vision and visual odometry research on the KITTI dataset — depth estimation, scene segmentation, and 3D scene understanding.</li>
+                <li>Achieved <strong>2-meter accuracy</strong> through calibration and preprocessing pipelines for object detection and tracking.</li>
+                <li>Built a custom training framework supporting diverse datasets and model architectures.</li>
+              </ul>
+              <div class="tags"><span>Stereo Vision</span><span>KITTI</span><span>Visual Odometry</span><span>OpenCV</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <h3>Robotics Software Engineer</h3>
+                <span class="company">IndiaFIRST® Robotics</span>
+              </div>
+              <div class="exp-meta">
+                <span>Pune, India</span>
+                <span class="sep">·</span>
+                <span>Jun 2021 — Jul 2022</span>
+              </div>
+              <ul class="exp-points">
+                <li>Developed an MVP in C++ and Python for real-time sensor fusion and perception analytics on Automated Guided Vehicles.</li>
+                <li>Built data pipelines for ingestion, transformation, storage, and error handling.</li>
+                <li>Prototyped <strong>EvoBOT</strong> — a 1/4-scale self-balancing robot capable of object grasping and slope traversal.</li>
+              </ul>
+              <div class="tags"><span>C++</span><span>Python</span><span>AGV</span><span>Sensor Fusion</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <h3>Robotics Engineer — Team Rudra (Robocon)</h3>
+                <span class="company">Marathwada Mitra Mandal College of Engineering</span>
+              </div>
+              <div class="exp-meta">
+                <span>Pune, India</span>
+                <span class="sep">·</span>
+                <span>Aug 2018 — May 2020</span>
+              </div>
+              <ul class="exp-points">
+                <li>Developed autonomous mobile robot software in C++ — navigation, real-time sensor processing, collision avoidance.</li>
+                <li>International robotics competition team — Secured <strong>Rank 1</strong> (intermediate) and <strong>Rank 11</strong> (final) in India.</li>
+              </ul>
+              <div class="tags"><span>C++</span><span>Embedded</span><span>Mobile Robotics</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY / IN THE LAB -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">03</span>
+          <h2 class="section-title">In the Lab</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item reveal">
+            <img src="images/handme2.jpg" alt="Handme Bot — hardware assembly" loading="lazy" />
+            <figcaption>
+              <span class="gallery-tag">Handme Bot</span>
+              <h3>Embedded Control Stack</h3>
+              <p>Motor drivers, servo controllers, and dual-rail power on Raspberry Pi.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item reveal">
+            <img src="images/arm.jpg" alt="6-DOF robotic arm extension" loading="lazy" />
+            <figcaption>
+              <span class="gallery-tag">Manipulation</span>
+              <h3>6-DOF Robotic Arm</h3>
+              <p>Linear actuator + 6-DOF arm extension for pick-and-place tasks.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item reveal">
+            <img src="images/car.jpg" alt="Autonomous driving research vehicle at IDrive" loading="lazy" />
+            <figcaption>
+              <span class="gallery-tag">IDrive · FSD</span>
+              <h3>Autonomous Driving Platform</h3>
+              <p>End-to-end perception &amp; sensor fusion pipelines for Full Self-Driving and ADAS.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item reveal">
+            <img src="images/robocon.jpg" alt="Team Rudra at Robocon" loading="lazy" />
+            <figcaption>
+              <span class="gallery-tag">Robocon · Team Rudra</span>
+              <h3>International Robotics Competition</h3>
+              <p>Rank 1 (intermediate) &amp; Rank 11 (final) in India — autonomous mobile robots in C++.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">04</span>
+          <h2 class="section-title">Technical Stack</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Languages</h3>
+            <ul>
+              <li>C++</li><li>Python</li><li>C</li><li>C#</li><li>Bash</li><li>SQL</li><li>Assembly</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+            <h3>AI &amp; Perception</h3>
+            <ul>
+              <li>PyTorch</li><li>TensorFlow</li><li>Sensor Fusion</li><li>Motion Prediction</li><li>Object Detection</li><li>Semantic Segmentation</li><li>Depth Estimation</li><li>SLAM &amp; VO</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+            </div>
+            <h3>Computer Vision</h3>
+            <ul>
+              <li>OpenCV</li><li>Stereo Vision</li><li>Sensor Calibration</li><li>3D Scene Understanding</li><li>KITTI / nuScenes</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="14" x2="22" y2="14"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="14" x2="4" y2="14"/></svg>
+            </div>
+            <h3>Edge AI &amp; Deployment</h3>
+            <ul>
+              <li>NVIDIA Jetson AGX</li><li>DGX Spark</li><li>TensorRT</li><li>CUDA</li><li>ONNX</li><li>Quantization</li><li>Real-time Inference</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 10v6m11-11h-6M7 12H1m17.07-7.07l-4.24 4.24M9.17 14.83l-4.24 4.24M19.07 19.07l-4.24-4.24M9.17 9.17L4.93 4.93"/></svg>
+            </div>
+            <h3>Robotics Frameworks</h3>
+            <ul>
+              <li>ROS / ROS2</li><li>Motion Planning</li><li>Kinematics</li><li>Visual Odometry</li><li>SLAM Stack</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3>Systems &amp; Tooling</h3>
+            <ul>
+              <li>Linux</li><li>Docker</li><li>GStreamer</li><li>TCP/IP, UDP</li><li>Ethernet</li><li>CAD Modelling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">05</span>
+          <h2 class="section-title">Featured Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card featured reveal">
+            <div class="project-tag-row">
+              <span class="featured-pill">Flagship · Under IEEE Review</span>
+            </div>
+            <h3 class="project-title">NervLynx</h3>
+            <p class="project-subtitle">Contract-first runtime framework for reliable, observable robotics pipelines.</p>
+            <p class="project-desc">
+              An open-source robotics runtime that brings strong type contracts, deterministic
+              scheduling, and first-class observability to perception &amp; control pipelines.
+              Submitted to IEEE Robotics and Automation Letters (RA-L), 2026.
+            </p>
+            <div class="tags">
+              <span>Python</span><span>Robotics Runtime</span><span>Observability</span><span>Pipelines</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/vedantparnaik/nervlynx" target="_blank" rel="noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.04 1.78 2.72 1.27 3.38.97.11-.75.41-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.12 3.06.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.7.42.36.79 1.08.79 2.18v3.24c0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+                Repository
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <h3 class="project-title">Handme Bot</h3>
+            <p class="project-subtitle">Teleoperated mobile manipulator with bionic hand.</p>
+            <p class="project-desc">
+              4-wheeled omnidirectional mobile base + 5-finger bionic hand. Real-time kinematics,
+              PWM motor control, and gantry-style end-effector coordination on Raspberry Pi.
+              Extending with a 6-DOF arm + linear actuator for pick-and-place tasks.
+            </p>
+            <div class="tags">
+              <span>Raspberry Pi</span><span>Embedded</span><span>Motion Planning</span><span>NervLynx</span>
+            </div>
+            <div class="project-links">
+              <span class="status">In Progress</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <h3 class="project-title">Smart Dashcam Annotator</h3>
+            <p class="project-subtitle">Auto-labeling tool for dashcam footage.</p>
+            <p class="project-desc">
+              Python tool that ingests dashcam video and auto-generates annotations
+              for downstream perception model training.
+            </p>
+            <div class="tags"><span>Python</span><span>OpenCV</span><span>Annotation</span></div>
+            <div class="project-links">
+              <a href="https://github.com/vedantparnaik/smart-dashcam-annotator" target="_blank" rel="noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.04 1.78 2.72 1.27 3.38.97.11-.75.41-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.12 3.06.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.7.42.36.79 1.08.79 2.18v3.24c0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+                Repository
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <h3 class="project-title">Stereo Vision &amp; Depth — UTV</h3>
+            <p class="project-subtitle">Image segmentation + depth estimation for off-road UTVs.</p>
+            <p class="project-desc">
+              Stereo-camera based depth estimation and semantic segmentation pipeline
+              for off-road utility-terrain vehicles — built on KITTI methodology
+              with custom field data.
+            </p>
+            <div class="tags"><span>Stereo Vision</span><span>PyTorch</span><span>Segmentation</span><span>KITTI</span></div>
+            <div class="project-links">
+              <a href="https://github.com/vedantparnaik/Image-Segmentation-Depth-Estimation-for-UTV" target="_blank" rel="noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.04 1.78 2.72 1.27 3.38.97.11-.75.41-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.12 3.06.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.7.42.36.79 1.08.79 2.18v3.24c0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+                Repository
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <h3 class="project-title">ASL Fingerspelling Recognition</h3>
+            <p class="project-subtitle">Real-time American Sign Language fingerspelling recognizer.</p>
+            <p class="project-desc">
+              End-to-end deep learning system for recognizing ASL fingerspelling
+              from video — preprocessing, model training, and inference notebooks.
+            </p>
+            <div class="tags"><span>Jupyter</span><span>Deep Learning</span><span>CV</span></div>
+            <div class="project-links">
+              <a href="https://github.com/vedantparnaik/ASL-American-Sign-Language-Fingerspelling-Recognition" target="_blank" rel="noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.04 1.78 2.72 1.27 3.38.97.11-.75.41-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.12 3.06.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.7.42.36.79 1.08.79 2.18v3.24c0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+                Repository
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <h3 class="project-title">EvoBOT — Self-Balancing Robot</h3>
+            <p class="project-subtitle">1/4-scale self-balancing prototype.</p>
+            <p class="project-desc">
+              Prototype 1/4-scale self-balancing robot capable of object grasping and stable
+              traversal on slopes and rough terrain. Built during my time at IndiaFIRST Robotics.
+            </p>
+            <div class="tags"><span>C++</span><span>Control Systems</span><span>Embedded</span></div>
+            <div class="project-links">
+              <span class="status">Archived</span>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="more-link-wrap">
+          <a href="https://github.com/vedantparnaik" target="_blank" rel="noreferrer" class="more-link">
+            See all repositories on GitHub
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section class="section" id="publications">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">06</span>
+          <h2 class="section-title">Publications</h2>
+        </div>
+
+        <div class="pubs">
+          <article class="pub reveal">
+            <div class="pub-venue">IEEE RA-L · Under Review · 2026</div>
+            <h3 class="pub-title">NervLynx: A Contract-First Runtime Framework for Reliable and Observable Robotics Pipelines</h3>
+            <p class="pub-authors">Vedant Parnaik</p>
+            <p class="pub-abstract">
+              Proposes a runtime framework that enforces type and behavioral contracts at
+              component boundaries in robotics pipelines, enabling deterministic scheduling
+              and first-class observability across perception, planning, and control stages.
+            </p>
+            <a href="https://github.com/vedantparnaik/nervlynx" target="_blank" rel="noreferrer" class="pub-link">
+              View on GitHub
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </article>
+
+          <article class="pub reveal">
+            <div class="pub-venue">Earlier Work</div>
+            <h3 class="pub-title">Survey Paper on Smart Cultivation and Prediction System for Agriculture</h3>
+            <p class="pub-authors">Vedant Parnaik et al.</p>
+          </article>
+
+          <article class="pub reveal">
+            <div class="pub-venue">Earlier Work</div>
+            <h3 class="pub-title">Constructive Reuse of Polymers into Plastic Paver Blocks</h3>
+            <p class="pub-authors">Vedant Parnaik et al.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-head center">
+          <span class="section-num">07</span>
+          <h2 class="section-title">Let's build something</h2>
+        </div>
+
+        <p class="contact-lead reveal">
+          Open to senior &amp; staff-level roles in autonomous driving, robotics perception,
+          and applied ML. Also happy to chat about NervLynx, embodied AI, or anything at the
+          intersection of code and the physical world.
+        </p>
+
+        <div class="contact-grid reveal">
+          <a class="contact-card" href="mailto:vedantparnaik@gmail.com">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-value">vedantparnaik@gmail.com</div>
+            </div>
+          </a>
+
+          <a class="contact-card" href="https://www.linkedin.com/in/vedantparnaik" target="_blank" rel="noreferrer">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">LinkedIn</div>
+              <div class="contact-value">in/vedantparnaik</div>
+            </div>
+          </a>
+
+          <a class="contact-card" href="https://github.com/vedantparnaik" target="_blank" rel="noreferrer">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.04 1.78 2.72 1.27 3.38.97.11-.75.41-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.12 3.06.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.7.42.36.79 1.08.79 2.18v3.24c0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">GitHub</div>
+              <div class="contact-value">@vedantparnaik</div>
+            </div>
+          </a>
+
+          <a class="contact-card" href="tel:+17164868097">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Phone</div>
+              <div class="contact-value">+1 (716) 486-8097</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="contact-cta reveal">
+          <a href="mailto:vedantparnaik@gmail.com?subject=Let's%20chat" class="btn btn-primary btn-large">
+            Send me an email
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="logo">
+          <span class="logo-mark">◆</span>
+          <span class="logo-text">vedant<span class="accent">.</span>parnaik</span>
+        </div>
+        <p class="footer-tag">Robotics AI Engineer · Los Angeles, CA</p>
+      </div>
+      <div class="footer-right">
+        <p>© <span id="year"></span> Vedant Parnaik. Built with care.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
