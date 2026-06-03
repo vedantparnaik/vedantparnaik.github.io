@@ -731,11 +731,11 @@ ul { list-style: none; }
 }
 
 /* ============================================
-   Gallery — 4 columns in a zigzag pattern
+   Gallery — 3 columns in a zigzag pattern
    ============================================ */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 22px;
   align-items: start;
 }
@@ -749,11 +749,7 @@ ul { list-style: none; }
   transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
 }
 
-/* Zigzag: lift odd items, drop even items */
-.gallery-item:nth-child(odd) {
-  transform: translateY(0);
-}
-
+/* Zigzag: drop every other item by 64px so rows alternate up/down/up */
 .gallery-item:nth-child(even) {
   margin-top: 64px;
 }
@@ -1295,4 +1291,60 @@ ul { list-style: none; }
     animation-duration: .01ms !important;
     transition-duration: .01ms !important;
   }
+}
+
+/* ============================================
+   Print / PDF export
+   ============================================ */
+@media print {
+  /* Force everything visible (defeats reveal animations) */
+  .fade-in,
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  /* Hide screen-only chrome */
+  .nav,
+  .scroll-indicator,
+  .bg-grid,
+  .bg-glow {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  main { padding-top: 0 !important; }
+
+  .hero { min-height: auto !important; padding: 20px 0 30px !important; }
+  .section { padding: 30px 0 !important; page-break-inside: avoid; }
+
+  /* Sane page breaks */
+  .timeline-item,
+  .project-card,
+  .skill-card,
+  .gallery-item,
+  .pub {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  h1, h2, h3 { page-break-after: avoid; }
+
+  /* Keep gradient text from disappearing in print */
+  .gradient-text {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Disable hover effects */
+  *:hover { transform: none !important; }
+
+  a { text-decoration: none; color: inherit; }
+
+  .footer { margin-top: 30px; padding: 18px 0; }
 }
