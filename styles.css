@@ -104,6 +104,11 @@ ul { list-style: none; }
   height: 100%;
   z-index: -1;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity .45s ease;
+}
+
+.bg-network.is-visible {
   opacity: .9;
 }
 
@@ -297,6 +302,16 @@ ul { list-style: none; }
   align-items: center;
   position: relative;
   padding: 120px 0 50px;
+  overflow: hidden;
+}
+
+.hero-network {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .hero-inner {
@@ -304,6 +319,8 @@ ul { list-style: none; }
   margin: 0 auto;
   padding: 0 32px;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-grid {
@@ -1411,6 +1428,7 @@ ul { list-style: none; }
   .scroll-indicator,
   .bg-grid,
   .bg-glow,
+  .hero-network,
   .bg-network {
     display: none !important;
   }
