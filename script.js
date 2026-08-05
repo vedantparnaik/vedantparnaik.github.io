@@ -117,6 +117,7 @@
     }
 
     const ctx = canvas.getContext('2d');
+    const hero = document.getElementById('home');
     const mouse = { x: null, y: null, active: false };
     let particles = [];
     let width = 0;
@@ -124,8 +125,33 @@
     let dpr = 1;
     let scrollY = window.scrollY;
     let raf = 0;
+    let heroBottom = 0;
 
     const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
+    // 1 = fully in hero (black), 0 = below About (teal)
+    function heroFactor(screenY) {
+      if (!heroBottom) return 1;
+      const pageY = scrollY + screenY;
+      const fade = 80;
+      if (pageY < heroBottom - fade) return 1;
+      if (pageY > heroBottom) return 0;
+      return 1 - (pageY - (heroBottom - fade)) / fade;
+    }
+
+    function mixColor(alpha, factor, mouseLink) {
+      // Black in hero, teal (or indigo for mouse links) below
+      if (mouseLink) {
+        const r = Math.round(24 * factor + 99 * (1 - factor));
+        const g = Math.round(24 * factor + 102 * (1 - factor));
+        const b = Math.round(27 * factor + 241 * (1 - factor));
+        return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+      }
+      const r = Math.round(24 * factor + 13 * (1 - factor));
+      const g = Math.round(24 * factor + 148 * (1 - factor));
+      const b = Math.round(27 * factor + 136 * (1 - factor));
+      return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+    }
 
     const config = () => ({
       count: isMobile() ? 36 : 70,
@@ -143,6 +169,7 @@
       canvas.style.width = width + 'px';
       canvas.style.height = height + 'px';
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      heroBottom = hero ? hero.offsetTop + hero.offsetHeight : window.innerHeight;
       spawn();
     }
 
@@ -185,17 +212,20 @@
           }
         }
 
+        const pf = heroFactor(p.y);
+
         for (let j = i + 1; j < particles.length; j++) {
           const q = particles[j];
           const dx = p.x - q.x;
           const dy = p.y - q.y;
           const dist = Math.hypot(dx, dy);
           if (dist < connectDist) {
-            const alpha = (1 - dist / connectDist) * 0.28;
+            const alpha = (1 - dist / connectDist) * 0.32;
+            const factor = (pf + heroFactor(q.y)) / 2;
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(q.x, q.y);
-            ctx.strokeStyle = `rgba(13, 148, 136, ${alpha})`;
+            ctx.strokeStyle = mixColor(alpha, factor, false);
             ctx.lineWidth = 1;
             ctx.stroke();
           }
@@ -207,10 +237,11 @@
           const dist = Math.hypot(dx, dy);
           if (dist < mouseDist) {
             const alpha = (1 - dist / mouseDist) * 0.45;
+            const factor = (pf + heroFactor(mouse.y)) / 2;
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(mouse.x, mouse.y);
-            ctx.strokeStyle = `rgba(99, 102, 241, ${alpha})`;
+            ctx.strokeStyle = mixColor(alpha, factor, true);
             ctx.lineWidth = 1;
             ctx.stroke();
           }
@@ -218,14 +249,14 @@
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(13, 148, 136, 0.45)';
+        ctx.fillStyle = mixColor(0.5, pf, false);
         ctx.fill();
       }
 
       if (mouse.active) {
         ctx.beginPath();
         ctx.arc(mouse.x, mouse.y, 2.4, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(99, 102, 241, 0.55)';
+        ctx.fillStyle = mixColor(0.55, heroFactor(mouse.y), true);
         ctx.fill();
       }
 
