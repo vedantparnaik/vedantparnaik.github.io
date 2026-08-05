@@ -146,21 +146,31 @@
         </div>
 
         <div class="gallery-grid">
-          <figure class="gallery-item reveal">
-            <img src="images/handme3.jpg" alt="Handme Bot — bionic hand and onboard webcam" loading="lazy" />
+          <figure class="gallery-item gallery-item--carousel reveal">
+            <div class="gallery-carousel" data-carousel>
+              <div class="gallery-carousel-track" data-carousel-track>
+                <div class="gallery-carousel-slide">
+                  <img src="images/handme3.jpg" alt="Handme Bot — 5-finger bionic hand and onboard webcam" loading="lazy" />
+                </div>
+                <div class="gallery-carousel-slide">
+                  <img src="images/handme4.jpg" alt="Handme Bot — onboard electronics and omni-wheel base" loading="lazy" />
+                </div>
+              </div>
+              <button class="gallery-carousel-btn prev" type="button" aria-label="Previous photo" data-carousel-prev>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <button class="gallery-carousel-btn next" type="button" aria-label="Next photo" data-carousel-next>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+              <div class="gallery-carousel-dots" data-carousel-dots>
+                <button type="button" class="is-active" aria-label="Show bionic hand photo"></button>
+                <button type="button" aria-label="Show electronics photo"></button>
+              </div>
+            </div>
             <figcaption>
               <span class="gallery-tag">Handme Bot</span>
-              <h3>5-Finger Bionic Hand</h3>
-              <p>Articulated end-effector for manipulation, with onboard vision for visual localization on an omni-wheel base.</p>
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-item reveal">
-            <img src="images/handme4.jpg" alt="Handme Bot — onboard electronics and omni-wheel base" loading="lazy" />
-            <figcaption>
-              <span class="gallery-tag">Handme Bot</span>
-              <h3>Onboard Electronics</h3>
-              <p>Raspberry Pi, motor drivers, and mecanum wheels for omnidirectional motion.</p>
+              <h3>Bionic Hand &amp; Onboard Electronics</h3>
+              <p>5-finger articulated end-effector for manipulation and visual localization, with Raspberry Pi, motor drivers, and mecanum wheels for omnidirectional motion.</p>
             </figcaption>
           </figure>
 

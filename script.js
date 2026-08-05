@@ -67,6 +67,34 @@
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // ---- Gallery image carousels ----
+  document.querySelectorAll('[data-carousel]').forEach(carousel => {
+    const track = carousel.querySelector('[data-carousel-track]');
+    const slides = Array.from(track.children);
+    const dots = Array.from(carousel.querySelectorAll('[data-carousel-dots] button'));
+    const prev = carousel.querySelector('[data-carousel-prev]');
+    const next = carousel.querySelector('[data-carousel-next]');
+    let index = 0;
+
+    const goTo = (i) => {
+      index = (i + slides.length) % slides.length;
+      track.scrollTo({ left: slides[index].offsetLeft, behavior: 'smooth' });
+      dots.forEach((dot, di) => dot.classList.toggle('is-active', di === index));
+    };
+
+    prev?.addEventListener('click', () => goTo(index - 1));
+    next?.addEventListener('click', () => goTo(index + 1));
+    dots.forEach((dot, di) => dot.addEventListener('click', () => goTo(di)));
+
+    track.addEventListener('scroll', () => {
+      const i = Math.round(track.scrollLeft / track.clientWidth);
+      if (i !== index && i >= 0 && i < slides.length) {
+        index = i;
+        dots.forEach((dot, di) => dot.classList.toggle('is-active', di === index));
+      }
+    }, { passive: true });
+  });
+
   // ---- Subtle parallax on hero glow ----
   const glow = document.querySelector('.bg-glow');
   if (glow && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
