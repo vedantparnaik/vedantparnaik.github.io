@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A personal follow-me rover that carries your bags. An early-stage robotics pitch by Vedant Parnaik.">
+  <meta name="author" content="Vedant Parnaik">
+  <meta property="og:title" content="The Follow-Me Rover — Vedant Parnaik">
+  <meta property="og:description" content="You walk. It follows. Your hands are free.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://vedantparnaik.com/PITCHDECK/image%202.jpg">
+  <title>The Follow-Me Rover — Vedant Parnaik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#title" aria-label="Go to title">
+      <span class="brand-mark"></span>
+      <span>FOLLOW / 00</span>
+    </a>
+    <div class="topbar-meta">
+      <span class="confidential">Pre-seed · 2026</span>
+      <a href="mailto:vedantparnaik@gmail.com">vedantparnaik@gmail.com</a>
+    </div>
+  </header>
+
+  <aside class="rail" aria-label="Deck navigation">
+    <span class="rail-current">00</span>
+    <div class="rail-track"><span class="rail-progress"></span></div>
+    <span class="rail-total">12</span>
+  </aside>
+
+  <main>
+    <section class="slide hero" id="title" data-slide="00">
+      <div class="hero-media">
+        <img src="../PITCHDECK/image%202.jpg" alt="Concept of a personal rover carrying shopping bags outside a mall">
+      </div>
+      <div class="hero-scrim"></div>
+      <div class="slide-inner hero-inner">
+        <p class="eyebrow light">A personal follow-me rover</p>
+        <h1>You walk.<br>It follows.<br><em>Your hands are free.</em></h1>
+        <div class="hero-footer">
+          <p>Built for shopping first.<br>Designed to carry wherever people do.</p>
+          <div>
+            <strong>Vedant Parnaik</strong>
+            <span>Robotics AI Engineer · Los Angeles</span>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#problem"><span>Scroll to explore</span><i>↓</i></a>
+    </section>
+
+    <section class="slide paper" id="problem" data-slide="01">
+      <div class="slide-inner split">
+        <div>
+          <p class="eyebrow">01 / The problem</p>
+          <h2>Shopping ends when your hands are full.</h2>
+        </div>
+        <div class="problem-copy">
+          <p class="lead">You stop buying. You make two trips to the car. You skip the mall because hauling bags hurts.</p>
+          <div class="rule"></div>
+          <p>For older adults, people with back pain, or parents with children, carrying is not an inconvenience. It is the limit.</p>
+          <blockquote>“The cart stays in the store.<br>The bags come with you.”</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide dark" id="insight" data-slide="02">
+      <div class="slide-inner">
+        <p class="eyebrow light">02 / The insight</p>
+        <h2 class="statement">People think this is a<br><span class="strike">self-driving</span> problem.<br><em>It isn’t.</em></h2>
+        <div class="insight-grid">
+          <div class="insight-callout"><span>YOU</span><p>are the navigation.</p></div>
+          <p>A follower needs no maps, route planning, per-store setup, or building integration. You walk; it stays with you. That reframing removes the deployment problem that kills indoor robotics.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide image-slide" id="product" data-slide="03">
+      <div class="product-image">
+        <img src="../PITCHDECK/IMAGE%201.jpg" alt="Exploded product concept showing bag rack, camera, controller, motors, and battery">
+      </div>
+      <div class="slide-inner product-copy">
+        <p class="eyebrow">03 / The product</p>
+        <h2>A rack that<br>stays with you.</h2>
+        <ul class="feature-list">
+          <li><span>01</span>No store app or integration</li>
+          <li><span>02</span>Works across shops and to the car</li>
+          <li><span>03</span>Stops when identity is uncertain</li>
+          <li><span>04</span>Designed around commodity hardware</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide demo" id="demo" data-slide="04">
+      <div class="slide-inner">
+        <div class="section-heading">
+          <div><p class="eyebrow light">04 / Working demo</p><h2>Not a render.<br>A moving prototype.</h2></div>
+          <p>Teleoperation from a laptop using the live camera feed. The hardware deadman cuts the motors if commands stop arriving.</p>
+        </div>
+        <figure class="video-frame">
+          <video controls muted playsinline preload="metadata" poster="../PITCHDECK/demo-poster.jpg">
+            <source src="../PITCHDECK/demo.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+          <figcaption><span>Prototype footage · 00:07</span><span>Live camera + remote control</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="slide paper" id="built" data-slide="05">
+      <div class="slide-inner">
+        <p class="eyebrow">05 / What exists today</p>
+        <div class="built-grid">
+          <div>
+            <h2>Early, working,<br>and honest.</h2>
+            <p class="lead">This is a prototype, not a product.</p>
+          </div>
+          <ol class="capability-list">
+            <li><strong>Drives</strong><span>2-motor differential base</span></li>
+            <li><strong>Sees</strong><span>Sub-second live camera stream</span></li>
+            <li><strong>Responds</strong><span>Keyboard or game controller teleop</span></li>
+            <li><strong>Fails safe</strong><span>Hardware deadman cuts motor power</span></li>
+            <li><strong>Tracks</strong><span>Vision lock steers toward a target</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide prototype" id="hard" data-slide="06">
+      <div class="prototype-photo">
+        <img src="../PITCHDECK/car.png" alt="Current four-wheel rover prototype with exposed electronics">
+      </div>
+      <div class="slide-inner prototype-inner">
+        <div class="prototype-card">
+          <p class="eyebrow light">06 / What is actually hard</p>
+          <h2>The product is trust.</h2>
+          <p>The failure mode that matters is not “it got lost.” It is “it followed a stranger.”</p>
+          <p>In a crowded aisle, it must stay locked through occlusion—and refuse to move when it is not sure.</p>
+          <div class="safety-line"><i></i><span>Stop on uncertainty</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide accent-slide" id="wedge" data-slide="07">
+      <div class="slide-inner">
+        <p class="eyebrow">07 / Why this is not a smart cart</p>
+        <div class="compare">
+          <div class="compare-muted">
+            <span>Smart carts</span>
+            <h3>Belong to<br>the store.</h3>
+            <ul><li>Chain-specific checkout</li><li>Stays inside one location</li><li>Capex and rollout per store</li></ul>
+          </div>
+          <div class="compare-main">
+            <span>This rover</span>
+            <h3>Belongs to<br>the person.</h3>
+            <ul><li>Moves between shops</li><li>Continues to the parking lot</li><li>No permission to deploy</li></ul>
+          </div>
+        </div>
+        <p class="bottom-line">Different buyer. Different product. A much lower barrier to the first customer.</p>
+      </div>
+    </section>
+
+    <section class="slide paper" id="business" data-slide="08">
+      <div class="slide-inner">
+        <p class="eyebrow">08 / Business model</p>
+        <h2>Rent first.<br>Learn fast.</h2>
+        <div class="model-grid">
+          <article><span class="model-num">01</span><h3>Rent</h3><p>Hourly or daily at malls, events, and destination retail.</p><strong>Entry wedge</strong></article>
+          <article><span class="model-num">02</span><h3>Own</h3><p>For people who haul regularly—or cannot haul at all.</p><strong>Consumer scale</strong></article>
+          <article><span class="model-num">03</span><h3>Build on it</h3><p>Sell the follow-me base as a platform for developers.</p><strong>Platform upside</strong></article>
+        </div>
+        <p class="model-note">Rental keeps the price barrier near zero and puts units in front of real users quickly.</p>
+      </div>
+    </section>
+
+    <section class="slide dark" id="expansion" data-slide="09">
+      <div class="slide-inner">
+        <p class="eyebrow light">09 / Expansion</p>
+        <h2>One capability.<br><em>Many loads.</em></h2>
+        <div class="use-grid">
+          <div><span>01</span><strong>Older adults</strong><p>Independent shopping</p></div>
+          <div><span>02</span><strong>Hospitals</strong><p>Supplies down corridors</p></div>
+          <div><span>03</span><strong>Technicians</strong><p>Tools across factory floors</p></div>
+          <div><span>04</span><strong>Travel + events</strong><p>Airports and markets</p></div>
+        </div>
+        <blockquote class="category-quote">This category should look like the <em>mobility scooter</em>, not the warehouse robot: affordable enough to own, trusted enough to walk behind you.</blockquote>
+      </div>
+    </section>
+
+    <section class="slide paper" id="roadmap" data-slide="10">
+      <div class="slide-inner">
+        <p class="eyebrow">10 / Roadmap</p>
+        <div class="roadmap-head"><h2>From target lock<br>to trusted companion.</h2><p>Three engineering gates to a real-world pilot.</p></div>
+        <div class="roadmap">
+          <article class="active"><span>NOW</span><h3>Prove the loop</h3><ul><li>Teleop + target lock</li><li>2-motor base</li><li>Bench and hallway testing</li></ul></article>
+          <article><span>NEXT</span><h3>Follow a person</h3><ul><li>Identity re-acquisition</li><li>Load-bearing rack</li><li>Onboard compute</li></ul></article>
+          <article><span>THEN</span><h3>Earn trust</h3><ul><li>Obstacle safety</li><li>Stop on uncertainty</li><li>Pilot rentals in real aisles</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide founder" id="founder" data-slide="11">
+      <div class="slide-inner founder-grid">
+        <div>
+          <p class="eyebrow light">11 / Why me</p>
+          <h2>I build through<br>the messy middle.</h2>
+        </div>
+        <div class="founder-copy">
+          <p>I built <strong>Handme</strong>, a mobile manipulator whose base, arm, and hand had to work together in real time. Every delay and calibration error exposed what the plan missed.</p>
+          <p>That was version one of this journey. I am a robotics AI engineer with six years across perception, sensor fusion, SLAM, and embedded systems—and a room full of electronics that rarely behave the first time.</p>
+          <a href="https://vedantparnaik.com" target="_blank" rel="noreferrer">View engineering portfolio <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide ask" id="ask" data-slide="12">
+      <div class="slide-inner">
+        <p class="eyebrow light">12 / The ask</p>
+        <h2>Help me move it<br>from the hallway<br><em>to the aisle.</em></h2>
+        <div class="ask-grid">
+          <p>Raising a first check to build the load-bearing chassis, move vision onboard, make person-following reliable, and put prototypes in front of real shoppers.</p>
+          <div class="contact-block">
+            <span>Start a conversation</span>
+            <a href="mailto:vedantparnaik@gmail.com?subject=Follow-me%20rover">vedantparnaik@gmail.com <b>↗</b></a>
+            <a href="https://www.linkedin.com/in/vedantparnaik" target="_blank" rel="noreferrer">linkedin.com/in/vedantparnaik <b>↗</b></a>
+          </div>
+        </div>
+        <footer><span>Vedant Parnaik · Los Angeles, CA</span><span>Thank you.</span></footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
