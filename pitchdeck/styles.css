@@ -134,10 +134,11 @@ h2 em, h1 em { color: var(--acid); font-style: normal; }
 .demo { color: #fff; background: #252925; }
 .demo .slide-inner { justify-content: flex-start; }
 .section-heading { display: grid; grid-template-columns: 1.5fr .7fr; gap: 8vw; align-items: end; }
-.section-heading h2 { max-width: 800px; font-size: clamp(48px, 6.2vw, 92px); }
-.section-heading > p { max-width: 450px; margin: 0 0 8px; color: rgba(255,255,255,.62); line-height: 1.65; }
-.video-frame { margin: 52px 0 0; }
-.video-frame video { max-height: 52vh; background: #000; object-fit: contain; }
+.section-heading h2 { max-width: 800px; font-size: clamp(42px, 4.8vw, 74px); }
+.section-heading > p { max-width: 450px; margin: 0 0 8px; color: rgba(255,255,255,.62); font-size: 15px; line-height: 1.65; }
+.section-heading > p strong { color: #fff; }
+.video-frame { margin: 44px 0 0; }
+.video-frame video { max-height: 46vh; background: #000; object-fit: contain; }
 .video-frame figcaption { padding-top: 12px; display: flex; justify-content: space-between; color: rgba(255,255,255,.5); font: 400 10px/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; }
 
 /* Built */
